@@ -11,5 +11,9 @@ func main() {
 		})
 	})
 
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("Welcome to the Fiber server!")
+	})
+
 	app.Listen(":8080")
 }
